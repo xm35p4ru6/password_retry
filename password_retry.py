@@ -1,14 +1,13 @@
-x = 0
-while x < 3:
+x = 3
+while x > 0:
+    x = x - 1
     password = input('請輸入密碼')
     if password == 'a123456':
         print('登入成功')
         break
-    elif x == 0:
-        print('密碼錯誤, 還有2次機會!')
-        x = x + 1
-    elif x == 1:
-        print('密碼錯誤, 還有1次機會!')
-        x = x + 1
     else:
-        break
+        print('密碼錯誤!')
+        if x > 0:
+            print('還有', x, '次機會!')
+        else:
+            print('已被封鎖,請聯絡客服人員!')
